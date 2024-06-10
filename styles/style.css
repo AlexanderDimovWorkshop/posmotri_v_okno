@@ -112,13 +112,13 @@ ol {
 }
 
 .title {
+  margin-bottom: 22px;
   color: #fff;
   font-family: 'Oswald';
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 26px;
 }
 
 .content__card-link {
@@ -126,9 +126,9 @@ ol {
   color: #fff;
   text-decoration: none;
   &:hover {
+    color: #fff;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #fff;
   }
   &:focus {
     border: none;
@@ -159,7 +159,7 @@ ol {
 .content__video-card {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   padding: 2px;
   &:active {
     background-color: #545050;
@@ -200,13 +200,13 @@ ol {
 }
 
 .button {
+  margin-top: 20px;
   border: 1px solid #fff;
   color: #fff;
   font-family: "Fira Sans Condensed";
   font-weight: 700;
   font-size: 18px;
   background-color: #1b1919;
-  margin-top: 20px;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -221,9 +221,9 @@ ol {
 }
 
 .more-button {
+  display: block;
   width: 395px;
   height: 34px;
-  display: block;
   margin: 0 auto;
 }
 
@@ -311,8 +311,8 @@ fieldset {
 }
 
 .search-form__label:hover:has(.search-form__textfield)  {
-  cursor: text;
   text-decoration: none;
+  cursor: text;
 }
 
 .search-form__label:active > .search-form__textfield {
