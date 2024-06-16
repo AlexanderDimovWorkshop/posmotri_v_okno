@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -16,6 +18,7 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
+  padding: 133px 30px;
 }
 
 h1,
@@ -47,45 +50,38 @@ ol {
   white-space: nowrap;
 }
 
-.page {
-  padding: 133px 30px;
-}
-
 .content {
-  display: grid;
-  grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
-
-}
-.content:not(:last-child) {
+  display: flex;
+  flex-direction: row;
   column-gap: 30px;
 }
 
 .result {
-  display: grid;
-  grid-column: 1;
-  grid-row: 1;
-  margin-top: 77px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 77px;
+  column-gap: 16px;
 }
 
 .content__details {
-  display: grid;
-  grid-column: 2;
-  grid-row: 1;
-  justify-content: start;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  align-items: flex-start;
+  width: 399px;
 }
 
 .content__list-item {
   padding: 2px;
-
+  width: 396px;
+  height: 107px;
 }
 
 .result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -112,13 +108,13 @@ ol {
 }
 
 .title {
-  margin-bottom: 16px;
   color: #fff;
   font-family: 'Oswald';
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  height: 210px;
 }
 
 .content__card-link {
@@ -146,25 +142,27 @@ ol {
 
 .content__list {
   position: relative;
-  width: 399px;
+  width: 100%;
   height: 298px;
   overflow: auto;
   scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  flex-shrink: 1;
 }
 
-.content__list:not(:last-child) {
-  margin-bottom: 30px;
-}
+
 
 .content__video-card {
   display: flex;
   flex-direction: row;
-  margin-bottom: 26px;
   padding: 2px;
   &:active {
     background-color: #545050;
   }
 }
+
 
 .content__card-link_current {
   background-color: #545050;
@@ -183,7 +181,7 @@ ol {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
-  width: 200px;
+  width: 100%;
 }
 
 .content__video-card-thumbnail {
@@ -216,7 +214,7 @@ ol {
   }
   &:focus-visible {
     outline: 1px solid #fff;
-    outline-offset: 1px;
+    outline-offset: 2px;
   }
 }
 
@@ -225,10 +223,6 @@ ol {
   width: 395px;
   height: 34px;
   margin: 0 auto;
-}
-
-li:last-child {
-  padding: 2px;
 }
 
 .search-form__submit-button {
@@ -249,9 +243,8 @@ fieldset {
   font-family: "Fira Sans Condensed";
   font-weight: 400;
   font-size: 18px;
-
-
 }
+
 .search-form__textfield {
   width: 225px;
   height: 27px;
