@@ -12,13 +12,13 @@ html {
   display: flex;
   align-items: center;
   margin: auto;
+  padding: 133px 30px;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
-  padding: 133px 30px;
 }
 
 h1,
@@ -59,29 +59,29 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
-  padding-top: 77px;
   column-gap: 16px;
+  padding-top: 77px;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
-  row-gap: 26px;
   align-items: flex-start;
-  width: 399px;
+  row-gap: 22px;
 }
 
 .content__list-item {
+  display: flex;
+  flex: 1;
+  margin-bottom: 22px;
   padding: 2px;
-  width: 396px;
-  height: 107px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
   margin-bottom: 16px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
@@ -109,12 +109,11 @@ ol {
 
 .title {
   color: #fff;
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  height: 210px;
 }
 
 .content__card-link {
@@ -133,7 +132,9 @@ ol {
   &:focus-visible {
     outline: 1px solid #fff;
   }
-
+  &:active {
+    background: #545050;
+  }
 }
 
 .content__accent {
@@ -142,17 +143,13 @@ ol {
 
 .content__list {
   position: relative;
-  width: 100%;
-  height: 298px;
-  overflow: auto;
-  scrollbar-width: none;
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
   flex-shrink: 1;
+  width: 100%;
+  overflow: auto;
+  block-size: 298px;
 }
-
-
 
 .content__video-card {
   display: flex;
@@ -163,30 +160,33 @@ ol {
   }
 }
 
-
 .content__card-link_current {
   background-color: #545050;
 }
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
-  width: 100%;
+  block-size: 107px;
+  inline-size: 200px;
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  object-fit: cover;
+  object-position: center;
+  block-size: 107px;
+  inline-size: 194px;
 }
 
 .content__video-card-description {
@@ -195,22 +195,28 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
+  text-overflow: ellipsis;
 }
 
 .button {
+  display: block;
+  min-height: 34px;
   margin-top: 20px;
   border: 1px solid #fff;
   color: #fff;
   font-family: "Fira Sans Condensed";
   font-weight: 700;
   font-size: 18px;
-  background-color: #1b1919;
+  background-color: transparent;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
   }
   &:active {
     background-color: #545050;
+  }
+  &:focus {
+    outline: none;
   }
   &:focus-visible {
     outline: 1px solid #fff;
@@ -219,15 +225,17 @@ ol {
 }
 
 .more-button {
-  display: block;
-  width: 395px;
-  height: 34px;
   margin: 0 auto;
+  inline-size: 395px;
+}
+
+.search-form__textfield:focus,
+.search-form__checkbox:focus {
+  outline: none;
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  inline-size: 194px;
 }
 
 fieldset {
@@ -240,7 +248,7 @@ fieldset {
 
 .search-form__label-text {
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
@@ -249,11 +257,11 @@ fieldset {
   width: 225px;
   height: 27px;
   border-top: 1px solid #fff;
-  border-right: 1px solid #1b1919;
+  border-right: 1px solid transparent;
   border-bottom: 1px solid #fff;
-  border-left: 1px solid #1b1919;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: 'Fira Sans Condensed';
+  border-left: 1px solid transparent;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   background-color: #1b1919;
@@ -283,39 +291,30 @@ fieldset {
 
 .search-form__label {
   display: flex;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
-.search-form__label:hover:has(.search-form__label-text) {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.search-form__label:focus:has(.search-form__label-text) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
-.search-form__label:focus > .search-form__textfield  {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
-.search-form__label:hover:has(.search-form__textfield)  {
+.search-form__label > .search-form__textfield:hover {
   text-decoration: none;
   cursor: text;
 }
 
-.search-form__label:active > .search-form__textfield {
-border-right: 1px solid #fff;
-border-left: 1px solid #fff;
+.search-form__textfield:active {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
 }
 
-.search-form__label:focus,
-.search-form__textfield:focus,
-.search-form__label-text:focus {
-  outline: none;
+
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
