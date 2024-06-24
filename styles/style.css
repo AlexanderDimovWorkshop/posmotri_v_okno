@@ -96,7 +96,6 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  height: 54px;
 }
 
 .search-form__fieldset-title {
@@ -191,7 +190,7 @@ ol {
 
 .content__video-card-description {
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
@@ -204,7 +203,7 @@ ol {
   margin-top: 20px;
   border: 1px solid #fff;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
@@ -247,7 +246,7 @@ fieldset {
 }
 
 .search-form__label-text {
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -295,11 +294,6 @@ fieldset {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-}
-
-.search-form__label > .search-form__textfield:hover {
-  text-decoration: none;
-  cursor: text;
 }
 
 .search-form__textfield:active {
