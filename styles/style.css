@@ -72,9 +72,13 @@ ol {
 
 .content__list-item {
   display: flex;
-  flex: 1;
+  flex: 0;
   margin-bottom: 22px;
   padding: 2px;
+}
+
+.content__list-item:last-child{
+  margin-bottom: 0;
 }
 
 .result__video-container {
